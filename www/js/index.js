@@ -1,4 +1,5 @@
 document.addEventListener('deviceready', function() {
+	alert('deviceready');
 	bluetoothSerial.list(function(data){
 		mac_address = data[0]['address'];
 		console.log('mac_adress is '+mac_address);
