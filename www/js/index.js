@@ -1,4 +1,6 @@
-document.addEventListener('deviceready', function() {
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
 	alert('deviceready');
 	bluetoothSerial.list(function(data){
 		mac_address = data[0]['address'];
@@ -15,6 +17,6 @@ document.addEventListener('deviceready', function() {
 	}, function(){
 		alert('fail get bluetooth list');
 	});
-});
+};
 
 alert('loading');
